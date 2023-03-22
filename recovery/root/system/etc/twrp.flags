@@ -1,0 +1,28 @@
+/system_root       ext4    /dev/block/mapper/system     flags=display="System";wipeingui;
+/vendor            ext4    /dev/block/mapper/vendor     flags=display="Vendor";wipeingui;
+/product           ext4    /dev/block/mapper/product    flags=display="Product";
+/odm               ext4    /dev/block/mapper/odm        flags=display="Odm";
+
+/system_image       emmc    /dev/block/mapper/system    flags=backup=1;flashimg;display="System Image"
+/vendor_image       emmc    /dev/block/mapper/vendor    flags=backup=1;flashimg;display="Vendor Image"
+/product_image      emmc    /dev/block/mapper/product   flags=backup=1;flashimg;display="Product Image"
+/odm_image          emmc    /dev/block/mapper/odm       flags=backup=1;flashimg;display="Odm Image"
+
+/boot               emmc      /dev/block/by-name/boot               flags=display=Boot;backup=1;flashimg
+/recovery           emmc      /dev/block/by-name/recovery           flags=display=Recovery;backup=1;flashimg
+/metadata           ext4      /dev/block/by-name/metadata           flags=display=metadata
+/data               f2fs      /dev/block/by-name/userdata           flags=display="Internal Storage";backup=1;flashimg;wipeingui
+/cache              ext4      /dev/block/by-name/cache              flags=display=Cache;wipeingui
+/efs                ext4      /dev/block/by-name/sec_efs            flags=display=efs
+/sec_efs            ext4      /dev/block/by-name/sec_efs            flags=display=sec_efs
+/carrier            ext4      /dev/block/by-name/carrier            flags=display=carrier
+/modem              emmc      /dev/block/by-name/radio              flags=display=Modem;backup=1;flashimg
+/misc               emmc      /dev/block/by-name/misc               flags=display=misc
+/dtbo               emmc      /dev/block/by-name/dtbo               flags=display="Dtbo Image";backup=1;flashimg
+/prism              ext4      /dev/block/by-name/prism              flags=display="Prism";backup=1;flashimg
+/optics             ext4      /dev/block/by-name/optics             flags=display=Optics;backup=1;flashimg
+/vbmeta   	        emmc      /dev/block/by-name/vbmeta   		    flags=display="Vbmeta Image";backup=1;flashimg
+/vbmeta_samsung     emmc      /dev/block/by-name/vbmeta_samsung     flags=display="Vbmeta Samsung";backup=1;flashimg
+
+/external_sd    vfat    /dev/block/mmcblk0p1 /dev/block/mmcblk0 flags=display="External SD Card";storage;wipeingui;removable;
+/usb-otg        vfat    /dev/block/sdf1 /dev/block/sdf          flags=display="USB OTG";storage;wipeingui;removable;
